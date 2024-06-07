@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artworks",
+  "info": {
+    "singularName": "artwork",
+    "pluralName": "artworks",
+    "displayName": "artwork"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "year": {
+      "type": "biginteger",
+      "max": "2100",
+      "min": "1960"
+    }
+  }
+}
