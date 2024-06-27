@@ -4,7 +4,8 @@
   "info": {
     "singularName": "artwork",
     "pluralName": "artworks",
-    "displayName": "artwork"
+    "displayName": "artwork",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,20 @@
       "type": "biginteger",
       "max": "2100",
       "min": "1960"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

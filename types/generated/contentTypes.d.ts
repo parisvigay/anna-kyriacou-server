@@ -368,6 +368,7 @@ export interface ApiArtworkArtwork extends Schema.CollectionType {
     singularName: 'artwork';
     pluralName: 'artworks';
     displayName: 'artwork';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -388,6 +389,10 @@ export interface ApiArtworkArtwork extends Schema.CollectionType {
         },
         string
       >;
+    image: Attribute.Media<'images' | 'videos'> & Attribute.Required;
+    protected: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
